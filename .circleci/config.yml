@@ -5,7 +5,7 @@ jobs:
     - image: cimg/base:current
     steps:
     - checkout
-    - npm install
+    - run: npm install
 workflows:
   workflow:
     jobs:
