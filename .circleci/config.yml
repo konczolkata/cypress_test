@@ -6,12 +6,12 @@ orbs:
 jobs:
   build:
     docker:
-    - image: cimg/node:12.16.0
+    - image: cypress/included
     steps:
     - checkout
-    - run: npm install
-    - browser-tools/install-chrome
-    - browser-tools/install-chromedriver
+    # - run: npm install
+    # - browser-tools/install-chrome
+    # - browser-tools/install-chromedriver
     - run:
         command: |
           google-chrome --version
