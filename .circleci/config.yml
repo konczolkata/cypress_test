@@ -9,6 +9,7 @@ jobs:
     - image: cypress/included
     steps:
     - checkout
+    - run: apt-get update && apt-get install -y curl
     - run:
           name: Install nvm and switch Node.js version
           command: |
