@@ -15,7 +15,7 @@ jobs:
     - run:
         command: |
           google-chrome --version
-          chromedriver --version
+          # chromedriver --version
         name: Check install
     - run: npm update
     - run: 
