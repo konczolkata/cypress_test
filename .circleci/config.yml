@@ -9,7 +9,7 @@ jobs:
     - image: cypress/included
     steps:
     - checkout
-    # - run: npm install
+    - run: npm install
     # - browser-tools/install-chrome
     # - browser-tools/install-chromedriver
     - run:
@@ -18,7 +18,7 @@ jobs:
           # chromedriver --version
         name: Check install
     - run: 
-        command: npm start
+        command: npm:start
         background: true
     - run: npx cypress run --spec "./integration/kata_first_test.js"
 workflows:
