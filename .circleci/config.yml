@@ -17,6 +17,7 @@ jobs:
           google-chrome --version
           chromedriver --version
         name: Check install
+    - run: npm update
     - run: npm start
 workflows:
   workflow:
