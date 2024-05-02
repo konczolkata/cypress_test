@@ -18,7 +18,8 @@ jobs:
           chromedriver --version
         name: Check install
     - run: npm update
-    - run: npm start
+    - run: 
+        command: npm start
         background: true
     - run: npx cypress run --spec "./integration/kata_first_test.js"
 workflows:
