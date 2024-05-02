@@ -9,6 +9,15 @@ jobs:
     - image: cypress/included
     steps:
     - checkout
+    - run:
+          name: Install nvm and switch Node.js version
+          command: |
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            nvm install 12.16.0 # Specify the Node.js version you want to install
+            nvm use 12.16.0
+            node --version
     - run: npm install
     # - browser-tools/install-chrome
     # - browser-tools/install-chromedriver
