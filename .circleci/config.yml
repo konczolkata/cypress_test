@@ -17,7 +17,6 @@ jobs:
           google-chrome --version
           # chromedriver --version
         name: Check install
-    - run: npm update
     - run: 
         command: npm start
         background: true
